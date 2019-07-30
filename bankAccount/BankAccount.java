@@ -38,7 +38,7 @@ public class BankAccount {
 		}
 		else {
 			return this.accountBalance;
-		}
+		}}
 	}
 	public void printCustomerDetails()
 	{
