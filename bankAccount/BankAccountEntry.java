@@ -29,14 +29,14 @@ public class BankAccountEntry {
 			System.out.println("the total balance is "+totalBalanceAftrDeposit);
 			break;
 		case 3:
-			System.out.println("enter the money you want to withdraw");
+			System.out.println("enter the Amount you want to withdraw");
 			float WithdrawAmount=sc.nextFloat();
 			if ((WithdrawAmount)>500){
 				System.out.println("you cannot withdraw more than 500");
 			}
 			else {
 				double totalBalanceAfterWithdraw= ba.withdrawFunds(WithdrawAmount);
-				System.out.println("the total balance  aftr withdrawing "+totalBalanceAfterWithdraw);
+				System.out.println("the total balance  after withdrawing "+totalBalanceAfterWithdraw);
 			}
 			break;
 		case 4:

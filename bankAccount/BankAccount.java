@@ -3,18 +3,18 @@ package bankAccount;
 
 public class BankAccount {
 	
-	long accountNumber=123456789;
-	double accountBalance= 10000;
-	String phoneNumber = "9999999999";
-	String customerName = "Sravanthi";
-	String email = "sravanthi72@gmail.com";
+	private long accountNumber=123456789;
+	private double accountBalance= 10000;
+	private String phoneNumber = "9999999999";
+	private String customerName = "Sravanthi";
+	private String email = "sravanthi72@gmail.com";
 	
 	
 	
 	public double depositFunds(float DepAmount){
 				
 		this.accountBalance=this.accountBalance+DepAmount;
-		return accountBalance;
+		return this.accountBalance;
 		
 		}
 	public double withdrawFunds(float withdrawAmount)
@@ -22,22 +22,22 @@ public class BankAccount {
 		if(withdrawAmount<this.accountBalance) 
 		{
 			this.accountBalance= this.accountBalance-withdrawAmount;
-			return accountBalance;
+			return this.accountBalance;
 			
 		}
 		else
 		{
-			System.out.println("operATION NOT POSSIBLE BCOZ THE withdraw amount IS LESS THan the balance");
-			return accountBalance;
+			System.out.println("OPERATION NOT POSSIBLE BECAUSE THE withdraw amount SPECIFIED IS MORE THan the balance");
+			return this.accountBalance;
 		}
 		
 	}
 	public void printCustomerDetails()
 	{
-		System.out.println("accountNumber is"+ accountNumber);
-		System.out.println("accountBalance is"+ accountBalance);
-		System.out.println("phoneNumber is"+ phoneNumber);
-		System.out.println("Name "+customerName);
-		System.out.println("email "+email);
+		System.out.println("accountNumber is"+ this.accountNumber);
+		System.out.println("accountBalance is"+ this.accountBalance);
+		System.out.println("phoneNumber is"+ this.phoneNumber);
+		System.out.println("Name "+this.customerName);
+		System.out.println("email "+this.email);
 	}
 }
