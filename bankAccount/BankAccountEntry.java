@@ -40,6 +40,8 @@ public class BankAccountEntry {
 			System.out.println("exiting out of the system");
 			break;
 		default:
+			System.out.println("please enter the correct Choice 1,2,3 or 4");
+			break;
 		
 		}
 /*
