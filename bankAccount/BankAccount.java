@@ -4,7 +4,7 @@ package bankAccount;
 public class BankAccount {
 	
 	private long accountNumber=123456789;
-	private double accountBalance= 10000;
+	private double accountBalance= 100;
 	private String phoneNumber = "9999999999";
 	private String customerName = "Sravanthi";
 	private String email = "sravanthi72@gmail.com";
@@ -17,20 +17,28 @@ public class BankAccount {
 		return this.accountBalance;
 		
 		}
-	public double withdrawFunds(float withdrawAmount)
+	public double withdrawFunds(double withdrawAmount)
 	{
-		if(withdrawAmount<this.accountBalance) 
+		if (withdrawAmount>500)
+		{
+			System.out.println("you cannot withdraw more than 500");
+			return this.accountBalance;
+		}
+		else {
+		if(withdrawAmount<=this.accountBalance) 
 		{
 			this.accountBalance= this.accountBalance-withdrawAmount;
 			return this.accountBalance;
 			
-		}
-		else
+		} else
+		if(withdrawAmount>this.accountBalance) 
 		{
 			System.out.println("OPERATION NOT POSSIBLE BECAUSE THE withdraw amount SPECIFIED IS MORE THan the balance");
 			return this.accountBalance;
 		}
-		
+		else {
+			return this.accountBalance;
+		}
 	}
 	public void printCustomerDetails()
 	{

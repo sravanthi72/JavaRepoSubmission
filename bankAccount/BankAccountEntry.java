@@ -36,9 +36,9 @@ public class BankAccountEntry {
 			}
 			else {
 				double totalBalanceAfterWithdraw= ba.withdrawFunds(WithdrawAmount);
-				System.out.println("the total balance  after withdrawing "+totalBalanceAfterWithdraw);
+				System.out.println("Now the total balance is "+totalBalanceAfterWithdraw);
 			}
-			break;
+break;
 		case 4:
 			System.out.println("exiting out of the system");
 			break;
